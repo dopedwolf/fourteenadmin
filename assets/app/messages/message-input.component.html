@@ -1,0 +1,77 @@
+<div class="col-md-8 col-md-offset-2">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input
+                    type="text"
+                    id="title"
+                    class="form-control"
+                    [ngModel]="message?.title"
+                    name="title"
+                    required>
+            <label for="description">Description</label>
+            <input
+                    type="text"
+                    id="description"
+                    class="form-control"
+                    [ngModel]="message?.description"
+                    name="description"
+                    maxlength="220"
+                    required>
+            <label for="venue">Venue</label>
+            <input
+                    type="text"
+                    id="venue"
+                    class="form-control"
+                    [ngModel]="message?.venue"
+                    name="venue"
+                    required>
+            <label for="address">Address</label>
+            <input
+                    type="text"
+                    id="address"
+                    class="form-control"
+                    [ngModel]="message?.address"
+                    name="address"
+                    required>
+              <label for="price">Price</label>
+              <input
+                      type="text"
+                      id="price"
+                      class="form-control"
+                      [ngModel]="message?.price"
+                      name="price"
+                      required>
+              <label for="time">Time</label>
+              <input
+                      type="text"
+                      id="time"
+                      class="form-control"
+                      [ngModel]="message?.time"
+                      name="time"
+                      required>
+              <label for="date">Date</label>
+              <input
+                      type="text"
+                      id="date"
+                      class="form-control"
+                      [ngModel]="message?.date"
+                      name="date"
+                      required>
+              <label for="content">Event Type</label>
+              <select
+                id="eventType"
+                class="form-control"
+                [ngModel]="message?.eventType"
+                name="eventType"
+                required>
+                  <option value="art">Arts</option>
+                  <option value="music">Music</option>
+                  <option value="community">Community</option>
+                  <option value="gallery">Gallery Exhibition</option>
+              </select>
+        </div>
+        <button type="button" class="btn btn-danger" (click)="onClear(f)">Clear</button>
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<article class="panel panel-default">
+    <div class="panel-body">
+        {{ message.title }}
+        {{ message.description }}
+        {{ message.venue }}
+        {{ message.address }}
+        {{ message.time }}
+        {{ message.price }}
+        {{ message.date }}
+        {{ message.eventType }}
+    </div>
+    <footer class="panel-footer">
+        <div class="config" >
+            <a (click)="onEdit()">Edit</a>
+            <a (click)="onDelete()">Delete</a>
+        </div>
+    </footer>
+</article>
